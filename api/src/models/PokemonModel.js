@@ -2,11 +2,11 @@ const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
   
-  sequelize.define('pokemons', {
+  sequelize.define('Pokemons', {
     ID: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
       primaryKey: true,
-      autoIncrement: true
+      defaultValue:DataTypes.UUIDV4
     },
     name: {
       type: DataTypes.STRING,
@@ -21,11 +21,11 @@ module.exports = (sequelize) => {
       allowNull: true
     },
     attack: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: true
     },
     defence: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: true
     },
     speed: {
