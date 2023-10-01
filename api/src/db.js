@@ -2,6 +2,8 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
+const PokemonModel = require('./models/PokemonModel');
+const TypeModel = require('./models/TypeModel');
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 
 const sequelize = new Sequelize(
@@ -39,6 +41,9 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
+PokemonModel(sequelize);
+TypeModel(sequelize);
+
 const { Pokemons, Types } = sequelize.models;
 
 // Aca vendrian las relaciones
