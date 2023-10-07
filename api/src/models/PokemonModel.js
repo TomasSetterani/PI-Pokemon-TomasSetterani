@@ -3,7 +3,7 @@ const { DataTypes } = require('sequelize');
 module.exports = (sequelize) => {
   
   sequelize.define('Pokemons', {
-    ID: {
+    id: {
       type: DataTypes.UUID,
       primaryKey: true,
       defaultValue:DataTypes.UUIDV4
@@ -16,7 +16,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true
     },
-    HP: {
+    hp: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
@@ -24,7 +24,7 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    defence: {
+    defense: {
       type: DataTypes.INTEGER,
       allowNull: true
     },

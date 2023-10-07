@@ -14,7 +14,7 @@ if(source === 'api') {
            image: pokemonData.sprites.front_default,
            HP: pokemonData.stats[0].base_stat,
            attack: pokemonData.stats[1].base_stat,
-           defence: pokemonData.stats[2].base_stat, 
+           defense: pokemonData.stats[2].base_stat, 
            speed: pokemonData.stats[5].base_stat,
            weight: pokemonData.weight,
            height: pokemonData.height,
@@ -22,15 +22,15 @@ if(source === 'api') {
         return pokemonesAPI
     } else { 
         const pokemonesBD = {
-            id: pokemonData.ID,
+            id: pokemonData.id,
             name: pokemonData.name,
             image: pokemonData.image,
-            HP: pokemonData.HP,
+            hp: pokemonData.hp,
             attack: pokemonData.attack,
-            defence: pokemonData.defence,
+            defense: pokemonData.defense,
             speed: pokemonData.speed,
-            height: pokemonData.height,
-            weight: pokemonData.weight
+            weight: pokemonData.weight,
+            height: pokemonData.height
                 
         }
         return pokemonesBD
